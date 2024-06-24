@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToList.Page1"
+             BackgroundImageSource="back.png">
+
+
+    <RelativeLayout>
+        <Label Text="Создать новую задачу" FontSize="20" FontAttributes="Bold" FontFamily="Montserrat" RelativeLayout.XConstraint="60" RelativeLayout.YConstraint="60" />
+        <Label x:Name="SelectedDateLabel" 
+               FontSize="18" 
+               FontAttributes="Bold" 
+               FontFamily="Montserrat" 
+               RelativeLayout.XConstraint="60" 
+               RelativeLayout.YConstraint="90"/>
+        <Frame CornerRadius="15" Padding="50" RelativeLayout.XConstraint="42" RelativeLayout.YConstraint="120" >
+            <StackLayout>
+                <Entry Placeholder="Имя задачи:" PlaceholderColor="SkyBlue" FontSize="28" FontAttributes="Italic" FontFamily="Montserrat" TextColor="SkyBlue" x:Name="TaskNameEntry" />
+                <Entry Placeholder="Описание:" PlaceholderColor="SkyBlue" FontSize="28" FontAttributes="Italic" FontFamily="Montserrat" TextColor="SkyBlue" x:Name="TaskDescriptionEntry"/>
+                <Button Text="↑"
+                        Clicked="OnUpButtonClicked"
+                        TextColor="SkyBlue"
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        BackgroundColor="Transparent"/>
+                <Label x:Name="TimeLabel"
+                           Text="07:35"
+                           TextColor="SkyBlue"
+                           FontAttributes="Bold"
+                           FontFamily="Montserrat"
+                           FontSize="Large"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center" />
+                <Button Text="↓"
+                            Clicked="OnDownButtonClicked"
+                            TextColor="SkyBlue"
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        BackgroundColor="Transparent"/>
+            </StackLayout>
+        </Frame>
+        <Button RelativeLayout.XConstraint="135" RelativeLayout.YConstraint="620" BackgroundColor="SkyBlue" CornerRadius="15" TextColor="White" Text="Добавить" Clicked="CreateTaskClicked"/>
+    </RelativeLayout>
+
+</ContentPage>

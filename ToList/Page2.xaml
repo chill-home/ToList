@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToList.Page2"
+             BackgroundImageSource="back.png">
+    <ContentPage.Resources>
+        <Style x:Key="TaskLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="WidthRequest" Value="500"/>
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Frame" x:Key="TaskFrameStyle">
+            <Setter Property="CornerRadius" Value="20" />
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="WidthRequest" Value="40"/>
+            <Setter Property="BackgroundColor" Value="SkyBlue"/>
+        </Style>
+    </ContentPage.Resources>
+    <RelativeLayout>
+        <Label Text="Задачи" TextColor="White" FontAttributes="Bold" FontFamily="Montserrat" FontSize="40" RelativeLayout.XConstraint="20"/>
+        <Label Text="НА СЕГОДНЯ:" TextColor="White"  FontFamily="Montserrat" FontSize="40" RelativeLayout.XConstraint="50" RelativeLayout.YConstraint="50"/>
+        <Button  RelativeLayout.XConstraint="95" RelativeLayout.YConstraint="600" BackgroundColor="SkyBlue" CornerRadius="15" Text="Добавление задчи" Clicked="MainPageClicked"/>
+        <Frame RelativeLayout.XConstraint="35" RelativeLayout.YConstraint="120" HeightRequest="400" WidthRequest="250" CornerRadius="20" x:Name="MainFrame">
+            <StackLayout x:Name="TasksStackLayout" Spacing="10"/>
+        </Frame>
+    </RelativeLayout>
+</ContentPage>

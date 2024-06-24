@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToList.MainPage"
+             BackgroundImageSource="back.png">
+
+    <ContentPage.Resources>
+        <Style x:Key="DayLabelStyle" TargetType="Label" >
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="WidthRequest" Value="40"/>
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Frame" x:Key="TaskFrameStyle">
+            <Setter Property="CornerRadius" Value="25" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BackgroundColor" Value="White"/>
+        </Style>
+        <Style x:Key="TaskLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="SkyBlue"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="WidthRequest" Value="500"/>
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+        
+    </ContentPage.Resources>
+    <RelativeLayout>
+        <Grid x:Name="CalendarGrid"
+              BackgroundColor="Transparent"
+              Margin="20,50">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+        </Grid>
+        <Label Text="Добавление новой задачи" FontSize="20" FontAttributes="Bold" FontFamily="Montserrat" RelativeLayout.XConstraint="15" RelativeLayout.YConstraint="30"/>
+        <Button RelativeLayout.XConstraint="100" RelativeLayout.YConstraint="600" BackgroundColor="SkyBlue" Text="Добавить задачу" Clicked="OnAddTaskButtonClicked" CornerRadius="15"    />
+        <StackLayout x:Name="TasksStackLayout" RelativeLayout.XConstraint="30" RelativeLayout.YConstraint="330" HeightRequest="200" WidthRequest="300" BackgroundColor="Transparent"  >
+            
+        </StackLayout>
+        
+    </RelativeLayout>
+
+</ContentPage>
